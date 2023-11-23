@@ -1,507 +1,473 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 .Headersection {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 /* header1 start */
 
 .header1 {
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 0 1.5rem 0;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0 1.5rem 0;
 }
-
 
 .nav-logo {
-    display: flex;
-    align-items: center;
-    
+  display: flex;
+  align-items: center;
 }
 .nav-logo h1 {
-    padding-left: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    
+  padding-left: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
 }
 
 .nav-search {
-    display: flex;
-    align-items: center;
-    width: 342px;
-    height: auto;
-    border: 1px solid rgb(170, 170, 170);
-    border-radius: 8px;
-    outline-color: none;
-    padding: 0 10px 0 10px;
-    
-    
+  display: flex;
+  align-items: center;
+  width: 342px;
+  height: auto;
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 8px;
+  outline-color: none;
+  padding: 0 10px 0 10px;
 }
 .nav-input input {
-    border: none;
+  border: none;
 }
 
 .nav-text {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .nav-text p {
-    color: #555555
+  color: #555555;
 }
 .nav-text hr {
-    height: 2rem;
-    width: 1px;
-    border-style: solid;
-    border-width: 0px;
-    background-color: rgb(170, 170, 170);
+  height: 2rem;
+  width: 1px;
+  border-style: solid;
+  border-width: 0px;
+  background-color: rgb(170, 170, 170);
 }
 .nav-text i {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 /*  */
 .nav-about {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-    padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding: 0 10px 0 10px;
 }
 .nav-about a {
-    text-decoration: none;
-    color: #555555;
-    font-size: large;
-    
-    
+  text-decoration: none;
+  color: #555555;
+  font-size: large;
 }
-
 
 /*  */
 
 .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding-left: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-left: 5rem;
 }
-.nav-link img{
-    
-    height: 20px;
+.nav-link img {
+  height: 20px;
 }
-
 
 /* header1 end */
 
-
 /* header2 start */
 .header2 {
-    width: 100%;
-    background-color: #262626;
+  width: 100%;
+  background-color: #262626;
 }
 
 .width-div {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    gap: 2rem;
-    
-    color: #FFFFFF;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 2rem;
+
+  color: #ffffff;
 }
 
 .nav-left {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-left .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding-right: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-right: 3rem;
 }
 .nav-left .logo-p {
-    display: flex;
-    align-items: center;
-    
+  display: flex;
+  align-items: center;
 }
 .nav-left .logo-p div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem 0 1rem;
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
 }
 .hr1 {
-    height: 4rem;
-    width: 1px;
-    border-style: solid;
-    border-width: 0px;
-    background-color: rgb(170, 170, 170);
-    margin: 0 3rem 0 3rem;
-    
-    
+  height: 4rem;
+  width: 1px;
+  border-style: solid;
+  border-width: 0px;
+  background-color: rgb(170, 170, 170);
+  margin: 0 3rem 0 3rem;
 }
-
 
 /*  */
 .nav-mid {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .hr2 {
-    height: 4rem;
-    width: 1px;
-    border-style: solid;
-    border-width: 0px;
-    background-color: rgb(170, 170, 170);
-    
+  height: 4rem;
+  width: 1px;
+  border-style: solid;
+  border-width: 0px;
+  background-color: rgb(170, 170, 170);
 }
 
 /*  */
 .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
 }
 .nav-right div {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 .nav-right .msg-count {
-    background-color: #3DC47E;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    align-items: center;
-    
-} 
+  background-color: #3dc47e;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
+}
 .msg-count h4 {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* header2 end  */
 
-
-
-
 /* Header 3 start */
 .header3 {
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0 1rem 0 ;
-    
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0 1rem 0;
 }
 .menu-bar {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-.menu-bar li{
-    list-style: none;
-    font-weight: 500;
+.menu-bar li {
+  list-style: none;
+  font-weight: 500;
 }
 
 /* Header 3 end */
 
-
-
 /* hero section start */
 .hero-section {
-    width: 100%;
+  width: 100%;
 }
 .summer-sale {
-    width: 100%;
-    height: 480px;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    
+  width: 100%;
+  height: 480px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
 }
 .summer-sale .img-left {
-    width: 39%;
-    
+  width: 39%;
 }
 .summer-sale .img-right {
-    width: 61%;
-    
+  width: 61%;
 }
 
 .possition-div {
-    position: absolute;
-    left: 32%;
-    top: 31%;
-    
-    
+  position: absolute;
+  left: 32%;
+  top: 31%;
 }
 .possition-div .summer-percent {
-    background-color: white;
-    padding: 1rem;
+  background-color: white;
+  padding: 1rem;
 }
-.summer-percent h4{
-    display: flex;
-    justify-content: center;
-    font-weight: 800;
-    font-size: x-large;
-    padding : 0.5rem
-    
+.summer-percent h4 {
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+  font-size: x-large;
+  padding: 0.5rem;
 }
 
 .possition-div .summer-valid {
-    background-color: black;
-    padding: 0.5rem ;
-    
+  background-color: black;
+  padding: 0.5rem;
 }
-.summer-valid h4{
-    display: flex;
-    justify-content: center;
-    font-weight: 100;
-    padding : 0.3rem;
-    
+.summer-valid h4 {
+  display: flex;
+  justify-content: center;
+  font-weight: 100;
+  padding: 0.3rem;
 }
 
 /* flash sales start */
 .flash-sales {
-    width: 90%;
-    margin: 0 auto;
-    padding : 2.5rem 0 1.5rem 0;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2.5rem 0 1.5rem 0;
 }
-.flash-head, .top100-head {
-    display: flex;
-    justify-content: space-between; 
+.flash-head,
+.top100-head {
+  display: flex;
+  justify-content: space-between;
 }
 .flash-head div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* flash sales end */
 
 /* flash card start */
 .flash-card {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .div-container {
-    width: 25%;
+  width: 25%;
 }
 
 .card {
-    padding-top: 1.5rem;
-    width: 100%;
-    min-width: 200px;
+  padding-top: 1.5rem;
+  width: 100%;
+  min-width: 200px;
 }
 .card p {
-    display: flex;
-    font-size: large;
-    font-weight: bolder;
-    justify-content: center;
-    color: rgb(163, 163, 163);
+  display: flex;
+  font-size: large;
+  font-weight: bolder;
+  justify-content: center;
+  color: rgb(163, 163, 163);
 }
 .card .deal-time {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card .time {
-    padding: 5px;
+  padding: 5px;
 }
 
 .time h6 {
-    padding-left:6px ;
-    color: rgb(163, 163, 163);
+  padding-left: 6px;
+  color: rgb(163, 163, 163);
 }
 .card .product {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 .card .title {
-    padding: 1rem 2rem 0rem 8rem;
-    display: flex;
-    flex-direction: column;
+  padding: 1rem 2rem 0rem 8rem;
+  display: flex;
+  flex-direction: column;
 }
-.title h4, .title h6 {
-    padding: 0.5rem 0;
+.title h4,
+.title h6 {
+  padding: 0.5rem 0;
 }
 .title h6 {
-    color: rgb(124, 124, 124);
+  color: rgb(124, 124, 124);
 }
 .card .star {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 2rem 0.5rem 8rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem 0.5rem 8rem;
 }
 .star h6 {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .price {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5rem 0.5rem 8rem;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem 0.5rem 8rem;
+  align-items: center;
 }
-.price h3, .price h5 {
-    color: red;
-    font-weight: bold;
+.price h3,
+.price h5 {
+  color: red;
+  font-weight: bold;
 }
 
-.price div{
-    background-color: red;
-    border-radius: 0.2rem;
+.price div {
+  background-color: red;
+  border-radius: 0.2rem;
 }
 .price div h5 {
-    color: white;
-    padding: 0.1rem;
-    align-items: center;
-
+  color: white;
+  padding: 0.1rem;
+  align-items: center;
 }
-
 
 /* flash card end */
 
-
-
 /* tending post start */
 .trending-post {
-    width: 90%;
-    
-    margin: 0 auto;
-    padding : 2.5rem 0 1.5rem 0;
+  width: 90%;
+
+  margin: 0 auto;
+  padding: 2.5rem 0 1.5rem 0;
 }
 
 .trend-item {
-    display: flex;
-    justify-content: space-between;
-    padding : 2.5rem 0 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0 1.5rem 0;
 }
 .trend-container {
-    
-    width: 32.6%;
-    height: 30%;
-    background-color: black;
-    border-radius: 8px;
+  width: 32.6%;
+  height: 30%;
+  background-color: black;
+  border-radius: 8px;
 }
-
 
 .trend-card img {
-    width: 100%;
-    height: 437px;
-    object-fit: cover;
-    background-size: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+  width: 100%;
+  height: 437px;
+  object-fit: cover;
+  background-size: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .post-name {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem 1rem 2rem;
 }
 .post-names {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .post-names h5 {
-    padding: 0.7rem 0 0 0 ;
-    color: rgb(146, 146, 146);
+  padding: 0.7rem 0 0 0;
+  color: rgb(146, 146, 146);
 }
 .post-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: solid 2px white;
-    border-radius: 0.7rem;
-    padding :0.5rem
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 2px white;
+  border-radius: 0.7rem;
+  padding: 0.5rem;
 }
 .post-price h4 {
-    padding: 0 10px 0 5px;
+  padding: 0 10px 0 5px;
 }
-.post-names h4, .post-price h4, .post-price h5 {
-    color: white;
+.post-names h4,
+.post-price h4,
+.post-price h5 {
+  color: white;
 }
 /* tending post end */
 
 /* top 100 post start */
 .top100-product {
-    
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 .top100-item {
-    display: flex;
-    justify-content: space-between;
-    padding : 2.5rem 0 2.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0 2.5rem 0;
 }
 .top100-container {
-    width: 24%;
-    
-    
+  width: 24%;
 }
-.top100-card .product-img{
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    object-position: top center ;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+.top100-card .product-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: top center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .all-details {
-    padding: 20px;
-    
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+  padding: 20px;
+
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .title-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.title-div i{
-    font-size: large;
-    
+.title-div i {
+  font-size: large;
 }
-.top100-title h6{
-    padding-top: 1rem;
-    color: rgb(182, 182, 182);
+.top100-title h6 {
+  padding-top: 1rem;
+  color: rgb(182, 182, 182);
 }
 .starbig {
-    display: flex;
-    align-items: center;
-    padding: 0.7rem 0 0.7rem 0 ;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0 0.7rem 0;
 }
 .starbig h5 {
-    padding-left: 0.5rem;
-    color: rgb(116, 116, 116);
+  padding-left: 0.5rem;
+  color: rgb(116, 116, 116);
 }
 .top100-price {
-    display: flex;
-    align-items: center;
-    
+  display: flex;
+  align-items: center;
 }
 .top100-price h2 {
-    color: red;
+  color: red;
 }
 .top100-price h4 {
-    color: rgb(182, 182, 182);
+  color: rgb(182, 182, 182);
 }
 .top100-price .discount {
-    color: orangered;
+  color: orangered;
 }
 
-.top100-price h2, .top100-price h4, .top100-price div h4 {
-    padding-right:1rem ;
+.top100-price h2,
+.top100-price h4,
+.top100-price div h4 {
+  padding-right: 1rem;
 }
 /* top 100 post end */
 
+/* describe div start */
+.decribe-div {
+  width: 90%;
+}
+/* describe div end */
 /* hero section end */
