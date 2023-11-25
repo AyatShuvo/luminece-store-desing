@@ -825,6 +825,9 @@ body {
     justify-content: space-between;
     padding: 0.5rem 0;
   }
+  .tabheader-down .nav-link  {
+    padding-left: 1rem;
+  }
   .tabheader-down .nav-abouttablet {
     gap: 2rem;
   }
@@ -843,6 +846,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 90%;
+    padding: 1rem 0;
     margin: 0.5rem auto;
     color: white;
     font-size: medium;
