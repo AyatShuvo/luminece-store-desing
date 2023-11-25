@@ -3,12 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  overflow: hidden;
 }
 body {
   scroll-behavior: smooth;
 }
-.Headersection {
+.Header-section {
   width: 100%;
   height: auto;
 }
@@ -107,10 +106,20 @@ body {
 
   color: #ffffff;
 }
-
-.nav-left {
+.width-div .nav-left {
   display: flex;
   justify-content: space-between;
+}
+
+.logo-p {
+  display: flex;
+  justify-content: space-between;
+  font-size: medium;
+  gap: 5px;
+}
+.logo-p div {
+  display: flex;
+  align-items: center;
 }
 
 .nav-left .logo {
@@ -695,6 +704,7 @@ body {
     display: none !important;
   }
   .mobile-header {
+    display: block;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -746,9 +756,33 @@ body {
     padding: 0.5rem 10px 0.5rem 10px;
   }
   .mbhead-down .nav-text {
-    font-size: smaller;
+    font-size: small;
+    align-items: center;
+    gap: 0 !important;
+  }
+  .mbhead-down .nav-text i {
+    padding: 0 !important;
   }
   /* mobile header 1 end */
+
+  /* mobile header 2 start */
+  .header2 {
+    display: none !important;
+  }
+  .tablet-header {
+    display: none !important;
+  }
+
+  /* mobile header 2 end  */
+
+  /* mobile header 3 start */
+  .tablet-header3 {
+    display: none;
+  }
+  .header3 {
+    display: none;
+  }
+  /* mobile header 3 end*/
 }
 /* mobile header end*/
 
@@ -759,6 +793,9 @@ body {
 .tablet-header2 {
   display: none;
 }
+.tablet-header3 {
+  display: none;
+}
 @media (min-width: 658px) and (max-width: 1470px) {
   /* tablet header1 start */
   .header1 {
@@ -766,6 +803,12 @@ body {
   }
   .header2 {
     display: none !important;
+  }
+  .header3 {
+    display: none;
+  }
+  .mobile-header {
+    display: none;
   }
   .tablet-header {
     display: block;
@@ -797,6 +840,8 @@ body {
     background-color: rgb(38, 38, 38);
   }
   .tablet-div {
+    display: flex;
+    justify-content: space-between;
     width: 90%;
     margin: 0.5rem auto;
     color: white;
@@ -821,6 +866,26 @@ body {
     margin-left: 5px;
   }
   /* tablet header 2 end */
+
+  /* tablet header 3 start */
+  .tablet-header3 {
+    display: block;
+    width: 100%;
+    padding: 2rem 0 1rem 0;
+  }
+  .tablet-header3 .menu-bar {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  .tablet-header3 .menu-bar li {
+    font-size: small;
+  }
+  .header3 {
+    display: none;
+  }
+  /* tablet header 3 end */
 }
 /* tablet header end */
 
