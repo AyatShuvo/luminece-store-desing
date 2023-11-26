@@ -217,6 +217,27 @@ body {
 }
 .summer-sale .img-right {
   width: 61%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(116, 166, 234);
+  align-items: center;
+  font-size: larger;
+  padding: 4rem 4rem 4rem 4rem;
+}
+.img-right h1,
+.img-right h3 {
+  padding-bottom: 2rem;
+  align-items: center;
+  color: white;
+}
+.img-right button {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(65, 114, 220);
+  color: white;
+  font-size: large;
 }
 
 .possition-div {
@@ -725,6 +746,9 @@ body {
 .mobile-hero {
   display: none;
 }
+.div-top-mobile {
+  display: none;
+}
 @media (min-width: 275px) and (max-width: 657px) {
   /* mobile header 1 start */
   .header1 {
@@ -735,6 +759,9 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+  .mobile-hero {
+    display: block !important;
   }
 
   .mbhead-top {
@@ -871,14 +898,19 @@ body {
   }
   .flash-card {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     overflow-y: scroll;
+    padding-top: 2rem;
+    scroll-behavior: smooth;
+  }
+  .flash-card::-webkit-scrollbar {
+    width: 0%;
   }
   .flash-card .div-container {
     width: 57% !important;
+    min-width: 250px;
   }
   .card .product {
     overflow-wrap: content-box;
@@ -925,10 +957,103 @@ body {
   .trending-post .flash-head h1 {
     font-size: 1.5rem;
   }
+  .trending-post {
+    width: 90%;
+  }
+  .trend-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 1rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  .trend-item::-webkit-scrollbar {
+    width: 0%;
+  }
+
+  .trend-container {
+    width: 100%;
+  }
+  .trend-card {
+    min-width: 420px;
+  }
 
   /* trending post */
 
+  /* top100 post start */
+  .top100-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    gap: 1rem;
+    scroll-behavior: smooth;
+  }
+  .top100-item::-webkit-scrollbar {
+    width: 0%;
+  }
+
+  .top100-container {
+    width: 100%;
+  }
+  .top100-card {
+    min-width: 300px;
+  }
+  /* top100 post end */
+
+  /* describe start */
+  .decribe-div {
+    display: none !important;
+  }
+  /* describe end */
+
+  /* accsesorics start */
+  .accessories-div {
+    display: none !important;
+  }
+  /* accsesorics end */
+
   /* hero section end */
+
+  /* Footer start */
+  .login-div {
+    display: none !important;
+  }
+  .about-div {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: auto;
+    background-color: rgb(209, 226, 235);
+  }
+  .about-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about-names {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 3rem 0;
+    justify-content: space-around;
+  }
+
+  .description-div {
+    display: none !important;
+  }
+
+  .div-top-mobile {
+    width: 100%;
+    margin: 2rem auto;
+  }
+  .left-visa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Footer end */
 }
 /* mobile header end*/
 
@@ -1069,15 +1194,17 @@ body {
   }
   .flash-card .div-container {
     width: 50% !important;
+    padding-bottom: 1rem;
   }
 
   .card-head {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 0.1rem;
   }
   .card-buttom {
     width: 90%;
@@ -1148,7 +1275,7 @@ body {
   .describe-left .text-div,
   .describe-right .text-div {
     font-size: small;
-    padding: 2rem 0.5rem 0.5rem 1rem;
+    padding: 2rem 0.5rem 0.5rem 1.5rem;
   }
   /* describe end */
 
@@ -1182,13 +1309,13 @@ body {
   .about-div {
     margin-top: -164px;
     width: 100%;
-    height: 550px;
+    height: 575px;
     background-color: rgb(209, 226, 235);
   }
   .login-div {
     position: relative;
     z-index: 10;
-    width: 50%;
+    width: 70%;
     margin: 3rem auto;
     background-color: rgb(114, 150, 171);
     padding: 3rem;
@@ -1206,6 +1333,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 auto;
+    gap: 1rem;
   }
   .about-names .fast-li {
     padding-bottom: 1rem;
