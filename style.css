@@ -1089,8 +1089,9 @@ body {
   .nav-text {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
     width: 53%;
+    font-size: small;
   }
 
   .tablet-header {
