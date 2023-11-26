@@ -906,9 +906,6 @@ body {
     padding-top: 2rem;
     scroll-behavior: smooth;
   }
-  .flash-card::-webkit-scrollbar {
-    width: 0%;
-  }
   .flash-card .div-container {
     width: 57% !important;
     min-width: 250px;
@@ -971,10 +968,6 @@ body {
     overflow-y: scroll;
     scroll-behavior: smooth;
   }
-  .trend-item::-webkit-scrollbar {
-    width: 0%;
-  }
-
   .trend-container {
     width: 100%;
   }
@@ -994,10 +987,6 @@ body {
     gap: 1rem;
     scroll-behavior: smooth;
   }
-  .top100-item::-webkit-scrollbar {
-    width: 0%;
-  }
-
   .top100-container {
     width: 100%;
   }
