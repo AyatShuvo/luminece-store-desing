@@ -289,13 +289,13 @@ body {
 
 /* flash card start */
 .flash-card {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto auto;
 }
 
 .flash-card .div-container {
-  width: 25%;
+  width: 21.7vw;
 }
 
 .card {
@@ -749,7 +749,7 @@ body {
 .div-top-mobile {
   display: none;
 }
-@media (min-width: 275px) and (max-width: 657px) {
+@media screen and (max-width: 657px) {
   /* mobile header 1 start */
   .header1 {
     display: none !important;
@@ -901,6 +901,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    flex-wrap: nowrap;
     overflow-y: scroll;
     padding-top: 2rem;
     scroll-behavior: smooth;
@@ -978,7 +979,7 @@ body {
     width: 100%;
   }
   .trend-card {
-    min-width: 420px;
+    min-width: 90vw;
   }
 
   /* trending post */
@@ -1036,7 +1037,7 @@ body {
   .about-names {
     display: grid;
     grid-template-columns: auto auto;
-    padding: 3rem 0;
+    padding: 2rem 0;
     justify-content: space-around;
   }
 
@@ -1045,6 +1046,7 @@ body {
   }
 
   .div-top-mobile {
+    display: block;
     width: 100%;
     margin: 2rem auto;
   }
@@ -1054,6 +1056,19 @@ body {
     justify-content: center;
   }
   /* Footer end */
+}
+@media screen and (max-width: 466px) {
+  .about-names {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 3rem 0;
+    gap: 1rem;
+    justify-content: start;
+  }
+  #ul .bold {
+    font-size: larger;
+    padding-bottom: 0.5rem;
+  }
 }
 /* mobile header end*/
 
@@ -1193,7 +1208,7 @@ body {
     flex-wrap: wrap;
   }
   .flash-card .div-container {
-    width: 50% !important;
+    width: 48% !important;
     padding-bottom: 1rem;
   }
 
@@ -1252,6 +1267,11 @@ body {
     background-size: cover;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+  }
+  .post-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
   }
   /* trend item end */
 
@@ -1329,7 +1349,7 @@ body {
     grid-template-columns: auto auto;
     justify-content: space-around;
     align-items: stretch;
-    padding-top: 180px;
+    padding-top: 150px;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 auto;
