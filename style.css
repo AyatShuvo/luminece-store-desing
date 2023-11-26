@@ -7,6 +7,9 @@
 body {
   scroll-behavior: smooth;
 }
+img {
+  content-visibility: auto;
+}
 .Header-section {
   width: 100%;
   height: auto;
