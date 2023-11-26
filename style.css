@@ -1086,6 +1086,13 @@ body {
     display: none;
   }
 
+  .nav-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 53%;
+  }
+
   .tablet-header {
     display: block;
     width: 90%;
