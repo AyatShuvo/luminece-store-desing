@@ -318,7 +318,7 @@ img {
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
 }
 
 .card h5 {
@@ -375,9 +375,12 @@ img {
 
 .price {
   display: flex;
-
   align-items: center;
-  gap: 15px;
+  gap: 10px;
+}
+.price h5 {
+  font-size: 13px;
+  font-weight: bolder;
 }
 .price h3,
 .price h5 {
@@ -427,6 +430,7 @@ img {
   background-size: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  content-visibility: auto;
 }
 .post-name {
   display: flex;

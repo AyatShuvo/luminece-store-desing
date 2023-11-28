@@ -1,6 +1,3 @@
-// fetch('https://dummyjson.com/products')
-// .then(res => res.json())
-// .then(json => console.log(json))
 const top100Item = document.querySelector(".top100-item");
 
 async function top100Fetch() {
@@ -53,8 +50,8 @@ async function dataShow() {
                 </div>
 
                 <div class="top100-price">
-                    <h2>${Math.round(data.price - discountPrice)}</h2>
-                    <h4><del>${data.price}</del></h4>
+                    <h2>৳${Math.round(data.price - discountPrice)}</h2>
+                    <h4><del>৳${data.price}</del></h4>
                 <div>
                     <h4 class="discount">- ${data.discountPercentage}%</h4>
                 </div>
@@ -97,8 +94,7 @@ async function flashSalesShow() {
     console.log(data);
 
     const discount = data.prices.regular_price - data.prices.sale_price;
-    console.log(discount);
-
+    const regularPrice = data.prices.regular_price == data.prices.sale_price;
     element.innerHTML = `
         <div class="card">
           <div class="card-head">
@@ -148,11 +144,17 @@ async function flashSalesShow() {
               </div>
 
               <div class="price">
-                <h3>${data.prices.currency_prefix} ${data.prices.price} </h3>
-                <h5><del>${data.prices.currency_prefix} ${data.prices.regular_price}</del></h5>
-                <div>
-                  <h5>${data.prices.currency_prefix} ${discount}</h5>
-                </div>
+                <h3>${data.prices.sale_price}${data.prices.currency_prefix}</h3>
+                ${
+                  regularPrice
+                    ? ""
+                    : `<h5 class="regular-data"><del>${data.prices.regular_price}${data.prices.currency_prefix} </del></h5>`
+                }
+                  ${
+                    discount
+                      ? `<div><h5 class="dis">Safe${discount}${data.prices.currency_prefix}</h5></div>`
+                      : ""
+                  }  
               </div>
             </div>
           </div>
@@ -164,3 +166,58 @@ async function flashSalesShow() {
 }
 
 flashSalesShow();
+
+const trendItem = document.querySelector(".trend-item");
+console.log(trendItem);
+
+async function trendingItem() {
+  try {
+    const response = await fetch(
+      "https://shop.mercegrower.com/wp-json/wc/store/v1/products"
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function trendingItemShow() {
+  const datas = await trendingItem();
+
+  datas.forEach((data, i) => {
+    const element = document.createElement("div");
+    element.className = `trend-container ${i}`;
+    element.enterKeyHint = data.id;
+
+    element.innerHTML = `
+    <div class="trend-card">
+      <img
+        loading="lazy"
+        decoding="async"
+        srcset="${data.images[0].srcset}"
+        sizes="${data.images[0].sizes}"
+        width="552px"
+        height="437px"
+        alt="trend-img"
+      />
+      <div class="post-name">
+        <div class="post-names">
+          <h4>${data.name}</h4>
+          <h5>${data.add_to_cart.description}</h5>
+        </div>
+  
+        <div class="post-price">
+          <h4>${data.prices.regular_price + data.prices.currency_prefix}</h4>
+          <h5>Shop Now</h5>
+        </div>
+      </div>
+    </div>
+    `;
+
+    if (i <= 2) {
+      return trendItem.append(element);
+    }
+  });
+}
+trendingItemShow();
