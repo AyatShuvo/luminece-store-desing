@@ -10,7 +10,6 @@ async function top100Fetch() {
   }
 }
 
-console.log(top100Item);
 async function dataShow() {
   const datas = await top100Fetch();
 
@@ -69,8 +68,8 @@ async function dataShow() {
 
 dataShow();
 
+// flash card section
 const flashCard = document.querySelector(".flash-card");
-console.log(flashCard);
 
 async function flashsalesFetch() {
   try {
@@ -84,6 +83,7 @@ async function flashsalesFetch() {
   }
 }
 
+
 async function flashSalesShow() {
   const datas = await flashsalesFetch();
 
@@ -91,31 +91,22 @@ async function flashSalesShow() {
     const element = document.createElement("div");
     element.className = `div-container ${i}`;
     element.enterKeyHint = data.id;
-    console.log(data);
+
+    // Set the date we're counting down to
+
 
     const discount = data.prices.regular_price - data.prices.sale_price;
     const regularPrice = data.prices.regular_price == data.prices.sale_price;
     element.innerHTML = `
         <div class="card">
-          <div class="card-head">
-            <h5>Deal Of The Day</h5>
-            <div class="deal-time">
-              <div class="time">
-                <h2>12</h2>
-                <h6>hour</h6>
-              </div>
-              <img src="./images/Header/Icon/Colon.png" width="" />
-              <div class="time">
-                <h2>43</h2>
-                <h6>min</h6>
-              </div>
-              <img src="./images/Header/Icon/Colon.png" alt="" />
-              <div class="time">
-                <h2>12</h2>
-                <h6>sec</h6>
-              </div>
-            </div>
+          ${ regularPrice ? "": 
+          `<div class="card-head">
+          <h5>Deal Of The Day</h5>
+          <div class="deal-time">
+          
           </div>
+          </div>` }
+          
 
           <img
             sizes="${data.images[0].sizes}"
@@ -161,14 +152,71 @@ async function flashSalesShow() {
         </div>
         `;
 
+        
+
     flashCard.append(element);
+
+    let countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+    function count(from) {
+      return from = Math.random(new Date("Jan 5, 2024 15:37:25")).getTime()
+    }
+    console.log(count(from));
+
+    // Update the count down every 1 second
+    let x = setInterval(function() {
+  
+      // Get today's date and time
+      let now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      let distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      var times = document.querySelectorAll(".deal-time")
+      times.forEach(time => {
+        time.innerHTML =     
+        `<div class="time">
+        <h2>${days}</h2>
+        <h6>Days</h6>
+      </div>
+      <img src="./images/Header/Icon/Colon.png"  />
+      <div class="time">
+        <h2>${hours}</h2>
+        <h6>hour</h6>
+      </div>
+      <img src="./images/Header/Icon/Colon.png" />
+      <div class="time">
+        <h2>${minutes}</h2>
+        <h6>min</h6>
+      </div>
+      <img src="./images/Header/Icon/Colon.png"  />
+      <div class="time">
+        <h2>${seconds}</h2>
+        <h6>sec</h6>
+      </div>`
+      });  
+
+
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.querySelectorAll(".deal-time").innerHTML = "EXPIRED";
+      }
+    }, 1000);
   });
 }
 
 flashSalesShow();
 
+
 const trendItem = document.querySelector(".trend-item");
-console.log(trendItem);
 
 async function trendingItem() {
   try {
