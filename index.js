@@ -102,7 +102,7 @@ async function flashSalesShow() {
               ? ""
               : `<div class="card-head">
           <h5>Deal Of The Day</h5>
-          <div class="deal-time">
+          <div class= "deal-time ${i}" id="${data.id}" >
           
           </div>
           </div>`
@@ -155,10 +155,23 @@ async function flashSalesShow() {
 
     flashCard.append(element);
 
-    let countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+
+function generateRandomDate(
+  from = new Date(2024, 0, 1),
+  to = new Date(),
+) {
+  return new Date(
+    from.getTime() +
+      Math.random() * (to.getTime() - from.getTime()),
+  );
+}
 
 
 
+
+let countDownDate = new Date(generateRandomDate()).getTime();
+// let countDownDate = generateRandomDate();
     // Update the count down every 1 second
     let x = setInterval(function () {
       // Get today's date and time
@@ -176,9 +189,10 @@ async function flashSalesShow() {
       let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Output the result in an element with id="demo"
-      var times = document.querySelectorAll(".deal-time");
-      times.forEach((time) => {
-        time.innerHTML = `<div class="time">
+      var times = document.getElementById(`${data.id}`)
+      if(times){
+
+      times.innerHTML = `<div class="time">
         <h2>${days}</h2>
         <h6>Days</h6>
       </div>
@@ -197,7 +211,7 @@ async function flashSalesShow() {
         <h2>${seconds}</h2>
         <h6>sec</h6>
       </div>`;
-      });
+    }
 
       // If the count down is over, write some text
       if (distance < 0) {
@@ -209,6 +223,9 @@ async function flashSalesShow() {
 }
 
 flashSalesShow();
+
+
+// trending item start
 
 const trendItem = document.querySelector(".trend-item");
 
@@ -266,4 +283,20 @@ trendingItemShow();
 
 
 
+
+// toggole mobile start
+
+const btn = document.querySelector(".toggle")
+const menu = btn.querySelector(".menu")
+menu.addEventListener ("click", function(){
+  if (menu.classList.contains("fa-bars")) {
+    
+    menu.classList.replace("fa-bars", "fa-times")
+    
+  } else {
+    menu.classList.replace("fa-times", "fa-bars")
+  }
+  document.getElementById("myDropdown").classList.toggle("show");
+  
+})
 
