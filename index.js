@@ -7,7 +7,7 @@ setInterval(() => {
   if (count > 4) {
     count = 1
   }
-},3000);
+},5000);
 
 
 
