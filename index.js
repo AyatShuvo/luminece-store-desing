@@ -1,3 +1,19 @@
+// sales card silde show
+let count = 1
+
+setInterval(() => {
+  document.getElementById("radio" + count).checked = true;
+  count++;
+  if (count > 4) {
+    count = 1
+  }
+},3000);
+
+
+
+
+
+
 const top100Item = document.querySelector(".top100-item");
 
 async function top100Fetch() {
