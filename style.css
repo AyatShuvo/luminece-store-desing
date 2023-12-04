@@ -778,33 +778,36 @@ img {
   }
 
   .toggle {
-    background-color: #3498db;
-    width: 3rem;
+    background-color: #455FEA;
+    width: 50px;
+    border-radius: 1rem;
   }
   .dropbtn {
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 17px;
+    font-size: 17px;
     border: none;
     cursor: pointer;
   }
 
   .dropbtn:hover,
   .dropbtn:focus {
-    background-color: #2980b9;
+    background-color: #455FEA;
   }
 
   .dropdown {
     position: relative;
     display: inline-block;
-    background-color: #3498db;
+    background-color: #455FEA;
+    
   }
 
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #2980b9;
+    background-color: #455FEA;
     min-width: 160px;
+    height: 490px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
