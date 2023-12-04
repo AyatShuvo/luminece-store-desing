@@ -778,18 +778,13 @@ img {
     display: block !important;
   }
 
-  .dropbtn {
+  .toggle {
     background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .cmark {
+    width: 3rem;
     
-    background-color: #3498DB;
+  }
+  .dropbtn {
+
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -797,6 +792,7 @@ img {
     cursor: pointer;
   }
   
+
   
   .dropbtn:hover, .dropbtn:focus {
     background-color: #2980B9;
@@ -1424,5 +1420,44 @@ img {
   /* footer section end */
 }
 /* tablet header end */
+
+
+/* slider show */
+.slider {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+.slides input{
+  display: none;
+}
+.slide {
+  width: 20%;
+  height: 500px;
+  transition: 2sews;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: -4px;
+  display: flex;
+  justify-content: center;
+
+}
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
 
 /* responsive media quere end */

@@ -24,14 +24,11 @@
       <!-- mobile header -->
       <header class="mobile-header">
         <div class="mbhead-top">
-          
           <div class="dropdown">
-            
-              <div class="toggle">
-                <i class="fa-solid fa-bars menu dropbtn"></i>
-              </div>
-              
-            
+            <div class="toggle">
+              <i class="fa-solid fa-bars menu dropbtn"></i>
+            </div>
+
             <div id="myDropdown" class="dropdown-content">
               <a href="#home">Home</a>
               <a href="#about">About</a>
@@ -40,7 +37,6 @@
               <a href="#contact">Support</a>
             </div>
           </div>
-          
 
           <div class="nav-logo">
             <img src="./images/Header/mobile/Logo.png" alt="" />
@@ -114,7 +110,6 @@
           <img src="./images/Header/Logo.png" alt="" />
           <h1>Lumiance</h1>
         </div>
-
         <div class="nav-search">
           <div class="nav-input">
             <input type="text" placeholder="Search Producs" />
@@ -306,17 +301,48 @@
 
       <!-- desktop summer sale -->
       <div class="summer-sale">
-        <img
-          loading="lazy"
-          decoding="async"
-          class="img-left"
-          src="./images/item-image/2f50beb2d1db60f3c98ec606394c2cac.jpeg"
-          alt=""
-        />
-        <div class="img-right">
-          <h1>Kimonos, Caftans & Pareos</h1>
-          <h3>Poolside glam included From $4.99</h3>
-          <button>Shop now</button>
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1" />
+            <input type="radio" name="radio-btn" id="radio2" />
+            <input type="radio" name="radio-btn" id="radio3" />
+            <input type="radio" name="radio-btn" id="radio4" />
+
+            <!-- slide image -->
+            <div class="slide first">
+              <img
+                loading="lazy"
+                decoding="async"
+                class="img-left"
+                src="./images/item-image/2f50beb2d1db60f3c98ec606394c2cac.jpeg"
+                alt=""
+              />
+              <!-- <div class="img-right">
+                <h1>Kimonos, Caftans & Pareos</h1>
+                <h3>Poolside glam included From $4.99</h3>
+                <button>Shop now</button>
+              </div> -->
+            </div>
+            <div class="slide slide"></div>
+            <div class="slide slide"></div>
+            <div class="slide slide"></div>
+
+            <!-- automatic start-->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+          </div>
+          <!-- manual start -->
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+          </div>
+          <!-- manual end -->
         </div>
       </div>
       <div class="possition-div">
