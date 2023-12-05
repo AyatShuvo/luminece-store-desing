@@ -10,79 +10,22 @@ setInterval(() => {
 },5000);
 
 
+// toggole mobile start
 
-
-
-
-const top100Item = document.querySelector(".top100-item");
-
-async function top100Fetch() {
-  try {
-    const response = await fetch("https://dummyjson.com/products");
-    const data = await response.json();
-    return data.products;
-  } catch (error) {
-    console.log(error);
+const btn = document.querySelector(".toggle")
+const menu = btn.querySelector(".menu")
+menu.addEventListener ("click", function(){
+  if (menu.classList.contains("fa-bars")) {
+    
+    menu.classList.replace("fa-bars", "fa-times")
+    
+  } else {
+    menu.classList.replace("fa-times", "fa-bars")
   }
-}
+  document.getElementById("myDropdown").classList.toggle("show");
+  
+})
 
-async function dataShow() {
-  const datas = await top100Fetch();
-
-  datas.forEach((data, i) => {
-    const element = document.createElement("div");
-    element.className = `top100-container ${i}`;
-    element.enterKeyHint = data.id;
-    const discountPrice = (data.discountPercentage / data.price) * 100;
-    element.innerHTML = `
-        <div class="top100-card">
-            <img 
-                sizes ="(max-width:500px) 100vw,500px"
-                loading= "lazy"
-                decoding= "async" 
-                height = "350px"
-                width = "500px"
-                class="product-img"
-                src= "${data.thumbnail}"
-                alt="${data.title}"
-            />
-
-            <div class="all-details">
-                <div class="title-div">
-                <div class="top100-title">
-                    <h4>${data.title}</h4>
-                    <p>${data.category} - ${data.brand}</p>
-                </div>
-                <i class="fa-regular fa-heart"></i>
-                </div>
-
-                <div class="starbig">
-                    <img src="./images/Header/Icon/starbig.png" alt="star" />
-                    <img src="./images/Header/Icon/starbig.png" alt="star" />
-                    <img src="./images/Header/Icon/starbig.png" alt="star" />
-                    <img src="./images/Header/Icon/starbig.png" alt="star" />
-                    <h5>(${data.rating})</h5>
-                </div>
-
-                <div class="top100-price">
-                    <h2>৳${Math.round(data.price - discountPrice)}</h2>
-                    <h4><del>৳${data.price}</del></h4>
-                <div>
-                    <h4 class="discount">- ${data.discountPercentage}%</h4>
-                </div>
-                </div>
-            </div>
-            </div>
-
-        `;
-
-    if (i < 4) {
-      return top100Item.append(element);
-    }
-  });
-}
-
-dataShow();
 
 // flash card section
 const flashCard = document.querySelector(".flash-card");
@@ -241,6 +184,9 @@ let countDownDate = new Date(generateRandomDate()).getTime();
 flashSalesShow();
 
 
+
+
+
 // trending item start
 
 const trendItem = document.querySelector(".trend-item");
@@ -300,19 +246,75 @@ trendingItemShow();
 
 
 
-// toggole mobile start
 
-const btn = document.querySelector(".toggle")
-const menu = btn.querySelector(".menu")
-menu.addEventListener ("click", function(){
-  if (menu.classList.contains("fa-bars")) {
-    
-    menu.classList.replace("fa-bars", "fa-times")
-    
-  } else {
-    menu.classList.replace("fa-times", "fa-bars")
+
+
+const top100Item = document.querySelector(".top100-item");
+
+async function top100Fetch() {
+  try {
+    const response = await fetch("https://dummyjson.com/products");
+    const data = await response.json();
+    return data.products;
+  } catch (error) {
+    console.log(error);
   }
-  document.getElementById("myDropdown").classList.toggle("show");
-  
-})
+}
 
+async function dataShow() {
+  const datas = await top100Fetch();
+
+  datas.forEach((data, i) => {
+    const element = document.createElement("div");
+    element.className = `top100-container ${i}`;
+    element.enterKeyHint = data.id;
+    const discountPrice = (data.discountPercentage / data.price) * 100;
+    element.innerHTML = `
+        <div class="top100-card">
+            <img 
+                sizes ="(max-width:500px) 100vw,500px"
+                loading= "lazy"
+                decoding= "async" 
+                height = "350px"
+                width = "500px"
+                class="product-img"
+                src= "${data.thumbnail}"
+                alt="${data.title}"
+            />
+
+            <div class="all-details">
+                <div class="title-div">
+                <div class="top100-title">
+                    <h4>${data.title}</h4>
+                    <p>${data.category} - ${data.brand}</p>
+                </div>
+                <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <div class="starbig">
+                    <img src="./images/Header/Icon/starbig.png" alt="star" />
+                    <img src="./images/Header/Icon/starbig.png" alt="star" />
+                    <img src="./images/Header/Icon/starbig.png" alt="star" />
+                    <img src="./images/Header/Icon/starbig.png" alt="star" />
+                    <h5>(${data.rating})</h5>
+                </div>
+
+                <div class="top100-price">
+                    <h2>৳${Math.round(data.price - discountPrice)}</h2>
+                    <h4><del>৳${data.price}</del></h4>
+                <div>
+                    <h4 class="discount">- ${data.discountPercentage}%</h4>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        `;
+
+    if (i < 4) {
+      return top100Item.append(element);
+    }
+  });
+}
+
+dataShow();
