@@ -1,31 +1,26 @@
 // sales card silde show
-let count = 1
+let count = 1;
 
 setInterval(() => {
   document.getElementById("radio" + count).checked = true;
   count++;
   if (count > 4) {
-    count = 1
+    count = 1;
   }
-},5000);
-
+}, 5000);
 
 // toggole mobile start
 
-const btn = document.querySelector(".toggle")
-const menu = btn.querySelector(".menu")
-menu.addEventListener ("click", function(){
+const btn = document.querySelector(".toggle");
+const menu = btn.querySelector(".menu");
+menu.addEventListener("click", function () {
   if (menu.classList.contains("fa-bars")) {
-    
-    menu.classList.replace("fa-bars", "fa-times")
-    
+    menu.classList.replace("fa-bars", "fa-times");
   } else {
-    menu.classList.replace("fa-times", "fa-bars")
+    menu.classList.replace("fa-times", "fa-bars");
   }
   document.getElementById("myDropdown").classList.toggle("show");
-  
-})
-
+});
 
 // flash card section
 const flashCard = document.querySelector(".flash-card");
@@ -51,10 +46,20 @@ async function flashSalesShow() {
     element.enterKeyHint = data.id;
 
     // Set the date we're counting down to
+    const priceData = String(data.prices.regular_price).split("");
+    const regularData =
+      priceData.slice(0, -2).join("") + "." + priceData.slice(-2).join("");
 
-    const discount = data.prices.regular_price - data.prices.sale_price;
-    const regularPrice = data.prices.regular_price == data.prices.sale_price;
+    const saleData = String(data.prices.sale_price).split("");
+    const salePrice =
+      saleData.slice(0, -2).join("") + "." + saleData.slice(-2).join("");
+
+    const discount = regularData - salePrice;
+    const regularPrice = regularData == salePrice;
     element.innerHTML = `
+        <a href="./product.html?${
+          data.id
+        }"  style="text-decoration: none; color: black;">
         <div class="card">
           ${
             regularPrice
@@ -95,11 +100,11 @@ async function flashSalesShow() {
               </div>
 
               <div class="price">
-                <h3>${data.prices.sale_price}${data.prices.currency_prefix}</h3>
+                <h3>${salePrice}${data.prices.currency_prefix}</h3>
                 ${
                   regularPrice
                     ? ""
-                    : `<h5 class="regular-data"><del>${data.prices.regular_price}${data.prices.currency_prefix} </del></h5>`
+                    : `<h5 class="regular-data"><del>${regularData}${data.prices.currency_prefix} </del></h5>`
                 }
                   ${
                     discount
@@ -110,27 +115,19 @@ async function flashSalesShow() {
             </div>
           </div>
         </div>
+        </a>
         `;
 
     flashCard.append(element);
 
+    function generateRandomDate(from = new Date(2024, 0, 1), to = new Date()) {
+      return new Date(
+        from.getTime() + Math.random() * (to.getTime() - from.getTime())
+      );
+    }
 
-
-function generateRandomDate(
-  from = new Date(2024, 0, 1),
-  to = new Date(),
-) {
-  return new Date(
-    from.getTime() +
-      Math.random() * (to.getTime() - from.getTime()),
-  );
-}
-
-
-
-
-let countDownDate = new Date(generateRandomDate()).getTime();
-// let countDownDate = generateRandomDate();
+    let countDownDate = new Date(generateRandomDate()).getTime();
+    // let countDownDate = generateRandomDate();
     // Update the count down every 1 second
     let x = setInterval(function () {
       // Get today's date and time
@@ -148,10 +145,9 @@ let countDownDate = new Date(generateRandomDate()).getTime();
       let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Output the result in an element with id="demo"
-      var times = document.getElementById(`${data.id}`)
-      if(times){
-
-      times.innerHTML = `<div class="time">
+      var times = document.getElementById(`${data.id}`);
+      if (times) {
+        times.innerHTML = `<div class="time">
         <h2>${days}</h2>
         <h6>Days</h6>
       </div>
@@ -170,7 +166,7 @@ let countDownDate = new Date(generateRandomDate()).getTime();
         <h2>${seconds}</h2>
         <h6>sec</h6>
       </div>`;
-    }
+      }
 
       // If the count down is over, write some text
       if (distance < 0) {
@@ -182,10 +178,6 @@ let countDownDate = new Date(generateRandomDate()).getTime();
 }
 
 flashSalesShow();
-
-
-
-
 
 // trending item start
 
@@ -242,12 +234,6 @@ async function trendingItemShow() {
   });
 }
 trendingItemShow();
-
-
-
-
-
-
 
 const top100Item = document.querySelector(".top100-item");
 

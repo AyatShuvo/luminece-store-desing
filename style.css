@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+
 body {
   scroll-behavior: smooth;
 }
@@ -295,6 +296,7 @@ img {
   display: grid;
   gap: 20px;
   grid-template-columns: auto auto auto auto;
+  align-items: end;
 }
 
 .flash-card .div-container {
@@ -778,7 +780,7 @@ img {
   }
 
   .toggle {
-    background-color: #455FEA;
+    background-color: #455fea;
     width: 50px;
     border-radius: 1rem;
   }
@@ -792,20 +794,19 @@ img {
 
   .dropbtn:hover,
   .dropbtn:focus {
-    background-color: #455FEA;
+    background-color: #455fea;
   }
 
   .dropdown {
     position: relative;
     display: inline-block;
-    background-color: #455FEA;
-    
+    background-color: #455fea;
   }
 
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #455FEA;
+    background-color: #455fea;
     min-width: 160px;
     height: 490px;
     overflow: auto;
