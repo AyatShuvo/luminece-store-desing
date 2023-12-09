@@ -147,7 +147,8 @@ async function flashSalesShow() {
       // Output the result in an element with id="demo"
       var times = document.getElementById(`${data.id}`);
       if (times) {
-        times.innerHTML = `<div class="time">
+        times.innerHTML = `
+      <div class="time">
         <h2>${days}</h2>
         <h6>Days</h6>
       </div>

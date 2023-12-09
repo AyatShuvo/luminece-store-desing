@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product fetch card</title>
-    <style>
-      body {
-        background-color: red;
-      }
-    </style>
+
     <script>
       const windo1 = window.location.search;
 
@@ -16,9 +12,119 @@
         window.location.replace("http://127.0.0.1:5501/error.html");
       }
     </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="h1">Product fetch card</h1>
+    <div class="header-section">
+      <!-- desktop header 1-->
+      <header class="header1">
+        <div class="nav-logo">
+          <img src="./images/Header/Logo.png" alt="" />
+          <h1>Lumiance</h1>
+        </div>
+        <div class="nav-search">
+          <div class="nav-input">
+            <input type="text" placeholder="Search Producs" />
+          </div>
+
+          <div class="nav-text">
+            <p>All Categories</p>
+            <img src="./images/Header/Icon/Arrow.png" alt="" />
+            <hr />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+
+        <div class="nav-about">
+          <a href="#">About us</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact us</a>
+          <a href="#">Help & support</a>
+        </div>
+
+        <div class="nav-link">
+          <img src="./images/Header/Icon/instagram.png" alt="" />
+          <img src="./images/Header/Icon/FB.png" alt="" />
+          <img src="./images/Header/Icon/telegram.png" alt="" />
+        </div>
+      </header>
+      <!-- desktop header 1 -->
+
+      <!-- desktop header 2 -->
+      <div class="header2">
+        <div class="width-div">
+          <div class="nav-left">
+            <div class="logo">
+              <img src="./images/Header/Icon/categories.png" alt="" />
+              <h2>Categories</h2>
+            </div>
+
+            <div class="logo-p">
+              <div>
+                <p>USD</p>
+                <img src="./images/Header/Arrow.png" alt="" />
+              </div>
+
+              <div>
+                <p>English</p>
+                <img src="./images/Header/Arrow.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <hr class="hr1" />
+
+          <div class="nav-mid">
+            <img src="./images/Header/black/Men cosmetic.png" alt="" />
+            <div>
+              <h3>Wekly Men's Toiletries Coupons.</h3>
+              <p>we entend exclusive discounts to our male clients</p>
+            </div>
+          </div>
+          <hr class="hr2" />
+
+          <div class="nav-right">
+            <div>
+              <img src="./images/Header/Icon/Sign in.png" alt="" />
+              <h3>Sing in</h3>
+            </div>
+            <div>
+              <img src="./images/Header/Icon/Favorides.png" alt="" />
+              <h3>Favorites</h3>
+            </div>
+            <div>
+              <img src="./images/Header/Icon/Card.png" alt="" />
+              <h3>Card</h3>
+              <div class="msg-count"><h4>3</h4></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- desktop header 2 -->
+
+      <!-- desktop header 3 -->
+      <div class="header-product-3">
+        <ul>
+          <li>Homepage</li>
+          <li>></li>
+          <li>Women</li>
+          <li>></li>
+          <li>Clothes</li>
+          <li>></li>
+          <li>Zara</li>
+        </ul>
+      </div>
+      <!-- desktop header 3 -->
+    </div>
+
+    <div class="product-hero-section"></div>
 
     <script src="./product.js"></script>
   </body>
