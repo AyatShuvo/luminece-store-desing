@@ -29,19 +29,21 @@ try {
       element.className = `product-card `;
       element.innerHTML = `
       <div class="product-hero-img-left">
+
       <div class="div-img-left">
-        <img             
-        sizes="${data.images[0].sizes}"
+
+      ${data.images.map(image => (
+
+        `<img             
+        sizes="${image.sizes}"
         loading="lazy"
         decoding="async"
-        srcset="${data.images[0].srcset}" 
+        srcset="${image.srcset}" 
         width="170px" 
-        height="192px">
-  
-        <img src="./images/item-image/product-2.jpeg" width="170px" height="192px">
-        <img src="./images/item-image/product-3.jpeg" width="170px" height="192px">
-        <img src="./images/item-image/product-4.jpeg" width="170px" height="192px">
-        <img src="./images/item-image/product-5.jpeg" width="170px" height="192px">
+        height="192px"/>
+        `
+    ))}
+      
       </div>
   
       <div class="div-img-right">
@@ -63,7 +65,7 @@ try {
       <div class="product-h1">
         <div class="product-name-price">
           <h1>${data.name}</h1>
-          <h2>${data.prices.sale_price}${data.prices.currency_prefix}</h2>
+          <h2>${data.price_html}</h2>
         </div>
         <div class="product-react">
           <i class="fa-solid fa-heart"></i>
@@ -107,7 +109,7 @@ try {
       </div>
   
       <div class="product-h6">
-        <h2>${data.prices.regular_price}${data.prices.currency_prefix}</h2>
+      <h2>${data.price_html}</h2>
         <hr>
         <p>${data.add_to_cart.description}</p>
   
@@ -126,11 +128,32 @@ try {
   
     </div>
       `;
-      productHero.append(element);
-    }
+      productHero.append(element); 
+    const qure = document.querySelectorAll(".div-img-left img")
+    const thumbnail = document.querySelector(".div-img-right ")
+    qure.forEach(image => {
+      image.addEventListener("mousemove", (e)=> {
+      thumbnail.innerHTML=`
+      <img           
+      sizes="${e.target.attributes.sizes.value}"
+      loading="lazy"
+      decoding="async"
+      srcset="${e.target.attributes.srcset.value}"
+      class="product"
+      alt="card-img" 
+      width="505px" 
+      height="670px" 
+      style="object-fit: cover">`
+      // thumbnail.attributes.srcset.value = e.target.attributes.srcset.value
+    })
+    
+        });    }
   }
 
+
   fetchShow();
+
+
 } catch (error) {
   console.log(error);
 }
